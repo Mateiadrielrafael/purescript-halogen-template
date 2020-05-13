@@ -14,7 +14,7 @@ You can chat with other Halogen users on the [PureScript Discourse](https://disc
 ## What does this offer over the original template
 
 1. This uses [pnpm](https://pnpm.js.org/) instead of npm as the package manager
-2. This uses [esbuild](https://github.com/evanw/esbuild) for compile times over 100 times faster than webpack
+2. This uses [esbuild](https://github.com/evanw/esbuild) for compile times 10x-100x times faster than webpack
 
 ## Getting started
 
