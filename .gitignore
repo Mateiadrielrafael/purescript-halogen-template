@@ -8,7 +8,4 @@ bower_components
 node_modules
 output
 
-*.lock
-package-lock.json
-
-dist/app.js
+dist

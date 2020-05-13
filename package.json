@@ -4,13 +4,13 @@
     "test": "spago test",
     "build": "spago build",
     "bundle": "spago bundle-app --to dist/app.js",
-    "bundle:watch": "webpack --mode=development --entry ./entry.js --output-path ./dist --output-filename app.js --progress --watch"
+    "prepare-build": "cp public/index.html dist/index.html",
+    "dev": "pnpm run prepare-build && nodemon & nano-server 8080 dist",
+    "build:js": "esbuild --outdir=dist public/entry.js --bundle"
   },
   "devDependencies": {
-    "purescript": "^0.13.6",
-    "purescript-psa": "^0.7.3",
-    "spago": "^0.15.2",
-    "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.11"
+    "esbuild": "^0.2.12",
+    "nano-server": "^0.5.4",
+    "nodemon": "^2.0.3"
   }
 }
