@@ -1,3 +1,6 @@
-import { main } from "../output/Main";
-
-main();
+if (production) {
+  require("../dist/bundle");
+} else {
+  require("../output/Main").main();
+  console.log("development");
+}

@@ -2,11 +2,11 @@
   "private": true,
   "scripts": {
     "test": "spago test",
-    "build": "spago build",
-    "bundle": "spago bundle-app --to dist/app.js",
+    "bundle:purescript": "spago bundle-app --to dist/app.js",
     "prepare-build": "cp public/index.html dist/index.html",
     "dev": "pnpm run prepare-build && nodemon & nano-server 8080 dist",
-    "build:js": "esbuild --outdir=dist public/entry.js --bundle"
+    "build:js": "esbuild --outdir=dist public/entry.js --bundle",
+    "build": "spago bundle-app --to dist/bundle.js && pnpm run build:js -- --minify --define:production=true"
   },
   "devDependencies": {
     "esbuild": "^0.2.12",
